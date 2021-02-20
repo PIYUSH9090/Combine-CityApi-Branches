@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  selector:
+    matchLabels:
+      app: api
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: piyush9090/sentiment-analysis-logic
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
