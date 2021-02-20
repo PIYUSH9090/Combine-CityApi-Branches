@@ -1,0 +1,96 @@
+Level is NOT DEBUG. There will be no wait.
+Trying to login. If you are NOT logged in, there will be a prompt
+Authenticating with existing credentials...
+Login Succeeded
+Building sentiment-analysis-logic
+Sending build context to Docker daemon  103.9kB
+Step 1/13 : FROM python:3.6-slim-buster
+ ---> 7fcd5f355774
+Step 2/13 : COPY . /app
+ ---> Using cache
+ ---> 474ff5b4785e
+Step 3/13 : WORKDIR /app
+ ---> Using cache
+ ---> ece545e629af
+Step 4/13 : RUN apt update -y
+ ---> Using cache
+ ---> 2f0e11497e3b
+Step 5/13 : RUN apt-get install -y libgl1-mesa-dev
+ ---> Using cache
+ ---> 4e5667e839a7
+Step 6/13 : RUN apt-get install tesseract-ocr -y
+ ---> Using cache
+ ---> afcc1eebfdfe
+Step 7/13 : RUN apt-get install tesseract-ocr-spa -y
+ ---> Using cache
+ ---> c1ea1ee26ff6
+Step 8/13 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 3935e526f5d2
+Step 9/13 : RUN pip install pytesseract
+ ---> Using cache
+ ---> d4d4eead217d
+Step 10/13 : RUN pip install tesseract
+ ---> Using cache
+ ---> 74ce677b529c
+Step 11/13 : RUN pwd
+ ---> Using cache
+ ---> 23911fe1bf30
+Step 12/13 : RUN ls -lrt
+ ---> Using cache
+ ---> 8fc5f24141a0
+Step 13/13 : CMD python app.py runserver 0.0.0.0:8080
+ ---> Using cache
+ ---> f6ed4dcc3465
+Successfully built f6ed4dcc3465
+Successfully tagged piyush9090/sentiment-analysis-logic:latest
+Pushing sentiment-analysis-logic
+Using default tag: latest
+The push refers to repository [docker.io/piyush9090/sentiment-analysis-logic]
+033fa7653e30: Preparing
+622d1483fd29: Preparing
+6305933f4214: Preparing
+ac415cf1d8a4: Preparing
+c5cec0bd44e3: Preparing
+cf2540e24b9f: Preparing
+a9adb60d2869: Preparing
+ed86a797adab: Preparing
+eba99e2d2b2d: Preparing
+22b9d0f21fcc: Preparing
+fb18487e4285: Preparing
+b986ceddf07c: Preparing
+87c8a1d8f54f: Preparing
+cf2540e24b9f: Waiting
+b986ceddf07c: Waiting
+22b9d0f21fcc: Waiting
+87c8a1d8f54f: Waiting
+a9adb60d2869: Waiting
+fb18487e4285: Waiting
+ed86a797adab: Waiting
+eba99e2d2b2d: Waiting
+c5cec0bd44e3: Layer already exists
+622d1483fd29: Layer already exists
+033fa7653e30: Layer already exists
+6305933f4214: Layer already exists
+ac415cf1d8a4: Layer already exists
+cf2540e24b9f: Layer already exists
+a9adb60d2869: Layer already exists
+ed86a797adab: Layer already exists
+eba99e2d2b2d: Layer already exists
+22b9d0f21fcc: Layer already exists
+fb18487e4285: Layer already exists
+b986ceddf07c: Layer already exists
+87c8a1d8f54f: Layer already exists
+latest: digest: sha256:f4a850f0c43e5e851bb4a2862e5dbac1ada5c41c69278299d644249a9946fcad size: 3063
+Running sentiment-analysis-logic
+87d7343358ad549d164b48306e8b49d91dfd0617b6a80dbf85358a7b75094153
+List of containers running now
+CONTAINER ID   IMAGE                                           COMMAND                  CREATED         STATUS                        PORTS                                                                                                      NAMES
+87d7343358ad   piyush9090/sentiment-analysis-logic             "/bin/sh -c 'python …"   5 seconds ago   Created                                                                                                                                  sleepy_dhawan
+367077c6d02a   piyush9090/sentiment-analysis-logic             "/bin/sh -c 'python …"   7 minutes ago   Up 7 minutes                  0.0.0.0:5050->5000/tcp                                                                                     angry_cohen
+64ddd1d8cf83   piyush9090/sentiment-analysis-logic             "/bin/sh -c 'python …"   25 hours ago    Created                                                                                                                                  admiring_wiles
+b7c51a0127c6   piyush9090/sentiment-analysis-logic             "/bin/sh -c 'python …"   25 hours ago    Created                                                                                                                                  laughing_shockley
+25d1e441219d   piyush9090/sentiment-analysis-logic             "/bin/sh -c 'python …"   28 hours ago    Exited (255) 52 minutes ago   0.0.0.0:5050->5000/tcp                                                                                     practical_sammet
+e23f3180cea2   gcr.io/k8s-minikube/kicbase:v0.0.15-snapshot4   "/usr/local/bin/entr…"   31 hours ago    Up About a minute             127.0.0.1:49164->22/tcp, 127.0.0.1:49163->2376/tcp, 127.0.0.1:49162->5000/tcp, 127.0.0.1:49161->8443/tcp   minikube
+ The one we just started is : 367077c6d02a
+sentiment_analysis container is running 367077c6d02a :) 
