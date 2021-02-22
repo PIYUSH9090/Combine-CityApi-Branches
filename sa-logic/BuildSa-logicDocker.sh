@@ -39,7 +39,7 @@ echo "Pushing sentiment-analysis-logic"
 docker push piyush9090/sentiment-analysis-logic
 # Here we run the container with that port 5000:5000
 echo "Running sentiment-analysis-logic"
-docker run -d -p 5050:5000 piyush9090/sentiment-analysis-logic &
+docker run -d -p 8080:8080 piyush9090/sentiment-analysis-logic &
 sleep 5
 echo "List of containers running now"
 docker container ls -a
